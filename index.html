@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MORGAN DOWNLOADER</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: #000;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>MORGAN DOWNLOADER</h1>
+  <input type="text" id="url" placeholder="Masukkan link TikTok">
+  <button onclick="download()">DOWNLOAD</button>
+</div>
+
+<script>
+function download() {
+  let url = document.getElementById("url").value.trim();
+  if(url === "") {
+    alert("Masukkan link TikTok dulu");
+    return;
+  }
+  window.open("https://ssstik.io/search?url=" + url, "_blank");
+}
+</script>
+</body>
+</html>
